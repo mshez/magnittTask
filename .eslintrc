@@ -1,10 +1,61 @@
 {
-    "extends": "fortech-react",
-    "env": {
-        "browser": true,
-        "jest": true
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "prettier",
+    "prettier/babel",
+    "prettier/react",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "rules": {
-        "react/prop-types": 0
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "react-hooks"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"],
+        "paths": ["."]
+      }
     }
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "error",
+    "react/prop-types": "off",
+    "react/display-name": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "react/jsx-filename-extension": "warn",
+    "react/self-closing-comp": "warn",
+    "react/no-array-index-key": "warn",
+    "react/jsx-props-no-spreading": "warn",
+    "react/require-default-props": "warn",
+
+    "prettier/prettier": "error",
+    "global-require": "warn",
+    "no-return-await": "error",
+    "camelcase": "warn",
+    "import/prefer-default-export": "warn",
+    "import/extensions": "error",
+    "no-unused-vars": "warn",
+    "no-use-before-define": "error",
+    "no-console": "warn",
+    "no-debugger": "warn"
+  }
 }
