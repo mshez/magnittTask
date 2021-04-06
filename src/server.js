@@ -13,7 +13,7 @@ import createStore, { initializeSession } from './store';
 
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, '../dist')));
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 function htmlTemplate(reactDom, reduxState, helmetData) {
   return `
