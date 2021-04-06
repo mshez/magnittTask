@@ -9,7 +9,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 import Helmet from 'react-helmet';
 import routes from './routes';
 import Layout from './components/Layout';
-import createStore, { initializeSession } from './store';
+import createStore from './store';
 
 const app = express();
 
@@ -22,8 +22,7 @@ function htmlTemplate(reactDom, reduxState, helmetData) {
         <head>
             <meta charset="utf-8">
             ${helmetData.title.toString()}
-            ${helmetData.meta.toString()}
-            <title>Magnitt Blog</title>
+            ${helmetData.meta.toString()}            
             <link rel="stylesheet" type="text/css" href="./styles.css" />
             <link rel="stylesheet"  href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" />
         </head>
@@ -42,8 +41,6 @@ function htmlTemplate(reactDom, reduxState, helmetData) {
 app.get('/*', (req, res) => {
   const context = {};
   const store = createStore();
-
-  store.dispatch(initializeSession());
 
   const dataRequirements = routes
     .filter((route) => matchPath(req.url, route)) // filter matching paths

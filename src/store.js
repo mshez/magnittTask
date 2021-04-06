@@ -6,10 +6,6 @@ import {
   fetchSingleBlog as FetchSingleBlog,
 } from './services/blogs';
 
-export const initializeSession = () => ({
-  type: 'INITIALIZE_SESSION',
-});
-
 const storeData = (data) => ({
   type: 'STORE_DATA',
   data,
@@ -24,15 +20,6 @@ export const fetchTaggedBlogs = () => (dispatch) =>
 export const fetchSingleBlog = (id) => (dispatch) =>
   FetchSingleBlog(id).then((res) => dispatch(storeData(res)));
 
-const sessionReducer = (state = false, action) => {
-  switch (action.type) {
-    case 'INITIALIZE_SESSION':
-      return true;
-    default:
-      return state;
-  }
-};
-
 const dataReducer = (state = [], action) => {
   switch (action.type) {
     case 'STORE_DATA':
@@ -43,7 +30,6 @@ const dataReducer = (state = [], action) => {
 };
 
 const reducer = combineReducers({
-  loggedIn: sessionReducer,
   data: dataReducer,
 });
 

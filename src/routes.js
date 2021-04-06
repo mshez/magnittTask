@@ -1,6 +1,6 @@
 import Home from './components/Home';
 import TagList from './components/TagList';
-import Detail from './components/Detail';
+import Details from './components/Details';
 
 export default [
   {
@@ -14,6 +14,6 @@ export default [
   },
   {
     path: '/:id',
-    component: Detail,
+    component: Details,
   },
 ];

@@ -39,6 +39,7 @@
     "react/react-in-jsx-scope": "error",
     "class-methods-use-this": "off",
     "react/prop-types": "off",
+    "react/jsx-fragments": "off",
     "react/display-name": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",

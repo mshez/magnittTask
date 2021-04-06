@@ -2,13 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchTaggedBlogs } from '../store';
 
-const TagList = ({ latestBlogs }) => {
+const TagList = ({ history, latestBlogs }) => {
   const title = (typeof window !== 'undefined' && window.location.pathname.split('/')[2]) || '';
   const onNavigate = (path) => {
     window.location.pathname = path;
   };
   return (
-    <div className="container md:max-w-2xl max-w-md mx-auto">
+    <div className="container md:max-w-2xl max-w-md mx-auto my-10">
       <button
         type="button"
         onClick={() => onNavigate('/')}
@@ -16,7 +16,9 @@ const TagList = ({ latestBlogs }) => {
       >
         Back to home
       </button>
-      <p className="text-3xl">{title} blogs</p>
+      <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl  my-5">
+        {title} blogs
+      </h2>
       {latestBlogs.map((blog) => (
         <div
           key={blog.id}
@@ -33,7 +35,7 @@ const TagList = ({ latestBlogs }) => {
             <div className="p-8">
               <button
                 type="button"
-                onClick={() => onNavigate(`/${blog.id}`)}
+                onClick={() => onNavigate(`/${blog.slug}`)}
                 className="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
               >
                 {blog.title}
@@ -43,9 +45,9 @@ const TagList = ({ latestBlogs }) => {
                 {blog.tags.split(',').map((tag) => (
                   <button
                     key={tag}
-                    onClick={() => onNavigate(`/tag/${tag}`)}
+                    onClick={() => history.push(`/tag/${tag}`)}
                     type="button"
-                    className="colors.blueGray border-2 px-1 mx-1"
+                    className="hover:bg-blue-500 hover:text-white colors.blueGray border px-2 py-1 mx-1 text-xs rounded"
                   >
                     {tag}
                   </button>
