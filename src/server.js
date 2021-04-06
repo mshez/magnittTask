@@ -23,8 +23,9 @@ function htmlTemplate(reactDom, reduxState, helmetData) {
             <meta charset="utf-8">
             ${helmetData.title.toString()}
             ${helmetData.meta.toString()}
-            <title>React SSR</title>
+            <title>Magnitt Blog</title>
             <link rel="stylesheet" type="text/css" href="./styles.css" />
+            <link rel="stylesheet"  href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" />
         </head>
         
         <body>

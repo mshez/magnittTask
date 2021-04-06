@@ -1,6 +1,10 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import { fetchCircuits } from './api';
+import {
+  fetchLatestBlogs,
+  fetchBlogByTag,
+  fetchSingleBlog as FetchSingleBlog,
+} from './services/blogs';
 
 export const initializeSession = () => ({
   type: 'INITIALIZE_SESSION',
@@ -11,8 +15,14 @@ const storeData = (data) => ({
   data,
 });
 
-export const fetchData = () => (dispatch) =>
-  fetchCircuits().then((res) => dispatch(storeData(res)));
+export const fetchLatest = () => (dispatch) =>
+  fetchLatestBlogs().then((res) => dispatch(storeData(res)));
+
+export const fetchTaggedBlogs = () => (dispatch) =>
+  fetchBlogByTag().then((res) => dispatch(storeData(res)));
+
+export const fetchSingleBlog = (id) => (dispatch) =>
+  FetchSingleBlog(id).then((res) => dispatch(storeData(res)));
 
 const sessionReducer = (state = false, action) => {
   switch (action.type) {

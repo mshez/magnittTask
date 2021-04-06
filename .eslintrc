@@ -37,11 +37,12 @@
   },
   "rules": {
     "react/react-in-jsx-scope": "error",
+    "class-methods-use-this": "off",
     "react/prop-types": "off",
     "react/display-name": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
-    "react/jsx-filename-extension": "warn",
+    "react/jsx-filename-extension": "off",
     "react/self-closing-comp": "warn",
     "react/no-array-index-key": "warn",
     "react/jsx-props-no-spreading": "warn",

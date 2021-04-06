@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Daily Crunch: Apple Arcade expands with classic games",
+    "description": "Apple adds classic titles to Apple Arcade, Microsoft experiences an outage and Coinbase is going public. This is your Daily Crunch for April 2, 2021. The big story: Apple Arcade expands with classi...",
+    "image": "https://techcrunch.com/wp-content/uploads/2021/04/apple_arcade-launches-more-than-130-award-winning-games_fruitninjaclassic_040221.jpg?w=430&h=230&crop=1",
+    "date": "3:10 AM GMT+5 April 3, 2021",
+    "tags": "Technology,Science",
+    "id": "1",
+    "slug": "slug_title_1"
+  },
+  {
+    "title": "Extra Crunch roundup: Tonal EC-1, Deliveroo’s rocky IPO, is Substack really worth $650M?",
+    "description": "This week included a deep dive on Tonal, a look at Substack’s valuation and how-tos on startup hiring and responding to security breaches.",
+    "image": "https://techcrunch.com/wp-content/uploads/2021/04/jose-rago-M3itYJP_jMc-unsplash.jpg?w=430&h=230&crop=1",
+    "date": "2:54 AM GMT+5 April 3, 2021",
+    "tags": "Technology,Programming",
+    "id": "2",
+    "slug": "slug_title_2"
+  },
+  {
+    "title": "Daily Crunch: Apple Arcade expands with classic games",
+    "description": "Apple adds classic titles to Apple Arcade, Microsoft experiences an outage and Coinbase is going public. This is your Daily Crunch for April 2, 2021. The big story: Apple Arcade expands with classi...",
+    "image": "https://techcrunch.com/wp-content/uploads/2021/04/apple_arcade-launches-more-than-130-award-winning-games_fruitninjaclassic_040221.jpg?w=430&h=230&crop=1",
+    "date": "3:10 AM GMT+5 April 3, 2021",
+    "tags": "Technology,Science",
+    "id": "3",
+    "slug": "slug_title_3"
+  },
+  {
+    "title": "Extra Crunch roundup: Tonal EC-1, Deliveroo’s rocky IPO, is Substack really worth $650M?",
+    "description": "This week included a deep dive on Tonal, a look at Substack’s valuation and how-tos on startup hiring and responding to security breaches.",
+    "image": "https://techcrunch.com/wp-content/uploads/2021/04/jose-rago-M3itYJP_jMc-unsplash.jpg?w=430&h=230&crop=1",
+    "date": "2:54 AM GMT+5 April 3, 2021",
+    "tags": "Technology,Programming",
+    "id": "4",
+    "slug": "slug_title_4"
+  }
+]
