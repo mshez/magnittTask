@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchTaggedBlogs } from '../store';
 import Card from './Common/Card';
 
-const TagList = ({ history, latestBlogs }) => {
+const TagList = ({ latestBlogs }) => {
   const title = (typeof window !== 'undefined' && window.location.pathname.split('/')[2]) || '';
   const onNavigate = (path) => {
     window.location.pathname = path;
